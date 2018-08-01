@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Reservation</string>
+    <string name="name">Name :</string>
+    <string name="hint1">Please enter name</string>
+    <string name="mobile">Mobile :</string>
+    <string name="hint2">Please enter mobile number</string>
+    <string name="pax">Pax :</string>
+    <string name="hint3">Enter size of group</string>
+    <string name="smoking">Smoking?</string>
+    <string name="confirm">Confirm</string>
+    <string name="day">Day</string>
+    <string name="time">Time</string>
+    <string name="h1">Click here to select day</string>
+    <string name="h2">Click here to select time</string>
+    <string name="reset">Reset</string>
+</resources>
