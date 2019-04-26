@@ -4,8 +4,8 @@ import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -17,14 +17,17 @@ import android.widget.TimePicker;
 
 import java.util.Calendar;
 
-public class activity_main extends AppCompatActivity {
+public class activity_main2 extends AppCompatActivity {
+
+
+
+
     Button btnReset;
     Button btnReserve;
     EditText etName;
     EditText etMobile;
     EditText etPax;
     CheckBox cbSmoke;
-    CheckBox cbSeat;
     TextView tvshow1;
     TextView tvshow2;
     EditText etDay;
@@ -58,7 +61,6 @@ public class activity_main extends AppCompatActivity {
         etMobile = findViewById(R.id.editTextHint2);
         etPax = findViewById(R.id.editTextHint3);
         cbSmoke = findViewById(R.id.checkBoxSmoking);
-        cbSeat = findViewById(R.id.checkBoxSeat);
         tvshow1 = findViewById(R.id.textViewDay);
         tvshow2 = findViewById(R.id.textViewTime);
         etDay = findViewById(R.id.editTextDay);
@@ -70,7 +72,7 @@ public class activity_main extends AppCompatActivity {
         Hour = calander.get(Calendar.HOUR);
         Minute = calander.get(Calendar.MINUTE);
 
-        Intent intentReceived = getIntent();
+
 
 
         btnReserve.setOnClickListener(new View.OnClickListener() {
@@ -96,18 +98,10 @@ public class activity_main extends AppCompatActivity {
                     isSmoke = "Non-Smoking";
                 }
 
-                String isSeat = "";
-                if (cbSeat.isChecked() ){
-                    isSeat = "Window Seat";
-                }else{
-                    isSeat = "Non-Window Seat";
-                }
+//                Intent intent = new Intent(getBaseContext(), activity_placeorder.class);
+//                startActivity(intent);
 
-                Intent intentReceived = getIntent();
-                Intent intent = new Intent(getBaseContext(), activity_menu.class);
-                startActivity(intent);
             }
-
         });
 
         etDay.setOnClickListener(new View.OnClickListener() {
@@ -123,7 +117,7 @@ public class activity_main extends AppCompatActivity {
                     }
                 };
 
-                DatePickerDialog myDateDialog = new DatePickerDialog(activity_main.this, myDateListener, Year, Month, Day);
+                DatePickerDialog myDateDialog = new DatePickerDialog(activity_main2.this, myDateListener, Year, Month, Day);
                 myDateDialog.show();
             }
         });
@@ -145,63 +139,11 @@ public class activity_main extends AppCompatActivity {
                         Minute = minute;
                     }
                 };
-                TimePickerDialog myTimeDialog = new TimePickerDialog(activity_main.this, myTimeListener, 23, 30,true);
+                TimePickerDialog myTimeDialog = new TimePickerDialog(activity_main2.this, myTimeListener, 23, 30,true);
                 myTimeDialog.show();
             }
         });
 
-
-
-        btnReset.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                etName.setText(null);
-//                etPax.setText(null);
-//                etMobile.setText(null);
-//                cbSmoke.setChecked(false);
-//                Day = calander.get(Calendar.DAY_OF_MONTH);
-//                Month = calander.get(Calendar.MONTH);
-//                Year = calander.get(Calendar.YEAR);
-//                Hour = calander.get(Calendar.HOUR);
-//                Minute = calander.get(Calendar.MINUTE);
-                String getName =etName.getText().toString().trim();
-                String getMobile = etMobile.getText().toString().trim();
-                String getPax = etPax.getText().toString().trim();
-                String getDate = etDay.getText().toString().trim();
-                String getTime = etTime.getText().toString().trim();
-
-                Log.i("getName", getName.length()+"");
-                Log.i("getMobile", getMobile.length()+"");
-                Log.i("getPax", getPax.length()+"");
-
-
-
-                String isSmoke = "";
-                if (cbSmoke.isChecked() ){
-                    isSmoke = "Smoking";
-                }else{
-                    isSmoke = "Non-Smoking";
-                }
-                String isSeat = "";
-                if (cbSeat.isChecked() ){
-                    isSeat = "Window Seat";
-                }else{
-                    isSeat = "Non-Window Seat";
-                }
-                String output = String.format("New Registration\n\nName: %s\nSmoking: %s\nSize: %s\nDate: %s\nTime: %s\nSeat: %s"
-                        ,getName, isSmoke, getPax , getDate, getTime, isSeat);
-                AlertDialog.Builder myBuilder = new AlertDialog.Builder(activity_main.this);
-                myBuilder.setTitle("Confirm Your Booking");
-                myBuilder.setMessage(output);
-                myBuilder.setCancelable(false);
-                myBuilder.setPositiveButton("Confirm",null);
-                myBuilder.setNeutralButton("Cancel", null);
-                AlertDialog myDialog = myBuilder.create();
-                myDialog.show();
-
-
-            }
-        });
 
     }
 }

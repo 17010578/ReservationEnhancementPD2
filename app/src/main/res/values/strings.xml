@@ -2,15 +2,60 @@
     <string name="app_name">Reservation</string>
     <string name="name">Name :</string>
     <string name="hint1">Please enter name</string>
-    <string name="mobile">Mobile :</string>
+    <string name="drinks">Drinks :</string>
     <string name="hint2">Please enter mobile number</string>
-    <string name="pax">Pax :</string>
+    <string name="Sides">Sides :</string>
     <string name="hint3">Enter size of group</string>
+    <string name="pax">Pax :</string>
+    <string name="mobile">Mobile :</string>
     <string name="smoking">Smoking?</string>
-    <string name="confirm">Confirm</string>
+    <string name="confirm">Next</string>
     <string name="day">Day</string>
     <string name="time">Time</string>
     <string name="h1">Click here to select day</string>
     <string name="h2">Click here to select time</string>
     <string name="reset">Reset</string>
+    <string name="nextSeat">Next</string>
+    <string name="hint4">Enter Main Dishes</string>
+    <string name="hint5">Enter Sides</string>
+    <string name="hint6">Enter Drinks</string>
+    <string name="viewOrder">View Order</string>
+    <string name="Next">Proceed To Payment</string>
+    <string name="viewBooking">View Booking</string>
+    <string name="welcome">Welcome To Andos !</string>
+    <string name="viewMenu">Proceed To Booking</string>
+    <string name="place">Proceed To Place Order</string>
+    <string name="seeMenu">View Menu</string>
+    <string name="back">Back</string>
+    <string name="menu">
+        Mains: \n
+        Aglio Olio     $13.90\n
+        Spaghetti With Tomato Sauce     $12.80\n
+        Chilli Crab Pasta     $11.80\n
+        Chicken Baked Rice     $9.80\n
+        Fish And Chips     $12.80\n
+        Chicken Chop     $13.80\n
+        Black Pepper Crab     $48\n
+        Lobster With Gravy Sauce     $21.80\n
+    </string>
+
+        <string name="sides">
+            Sides\n
+        Onion Rings     $6\n
+        Fried Croquettes     $8\n
+        French Fries     $5\n
+        Honey Wings(6pcs)     $10\n
+        Mushroom Soup     $4>
+        </string>
+
+    <string name="title">Menu</string>
+
+    <string name="drink">Drinks\n
+        <item>Coke     $3.50\n</item>
+        <item>Sprite     $3.50\n</item>
+        <item>Ice Lemon Tea(Homemade)     $3\n</item>
+        <item>Barley(Homemade)     $3\n</item>
+        <item>Tiger Beer     $12\n</item>
+    </string>
+
 </resources>

@@ -4,8 +4,8 @@ import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -17,7 +17,7 @@ import android.widget.TimePicker;
 
 import java.util.Calendar;
 
-public class activity_main extends AppCompatActivity {
+public class activity_placeorder extends AppCompatActivity {
     Button btnReset;
     Button btnReserve;
     EditText etName;
@@ -104,7 +104,7 @@ public class activity_main extends AppCompatActivity {
                 }
 
                 Intent intentReceived = getIntent();
-                Intent intent = new Intent(getBaseContext(), activity_menu.class);
+                Intent intent = new Intent(getBaseContext(), activity_order.class);
                 startActivity(intent);
             }
 
@@ -123,7 +123,7 @@ public class activity_main extends AppCompatActivity {
                     }
                 };
 
-                DatePickerDialog myDateDialog = new DatePickerDialog(activity_main.this, myDateListener, Year, Month, Day);
+                DatePickerDialog myDateDialog = new DatePickerDialog(activity_placeorder.this, myDateListener, Year, Month, Day);
                 myDateDialog.show();
             }
         });
@@ -145,7 +145,7 @@ public class activity_main extends AppCompatActivity {
                         Minute = minute;
                     }
                 };
-                TimePickerDialog myTimeDialog = new TimePickerDialog(activity_main.this, myTimeListener, 23, 30,true);
+                TimePickerDialog myTimeDialog = new TimePickerDialog(activity_placeorder.this, myTimeListener, 23, 30,true);
                 myTimeDialog.show();
             }
         });
@@ -190,8 +190,8 @@ public class activity_main extends AppCompatActivity {
                 }
                 String output = String.format("New Registration\n\nName: %s\nSmoking: %s\nSize: %s\nDate: %s\nTime: %s\nSeat: %s"
                         ,getName, isSmoke, getPax , getDate, getTime, isSeat);
-                AlertDialog.Builder myBuilder = new AlertDialog.Builder(activity_main.this);
-                myBuilder.setTitle("Confirm Your Booking");
+                AlertDialog.Builder myBuilder = new AlertDialog.Builder(activity_placeorder.this);
+                myBuilder.setTitle("Confirm Your Order");
                 myBuilder.setMessage(output);
                 myBuilder.setCancelable(false);
                 myBuilder.setPositiveButton("Confirm",null);

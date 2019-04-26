@@ -9,13 +9,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity_main">
+        <activity android:name=".activity_home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity_order" />
+        <activity android:name=".activity_payment" />
+        <activity android:name=".activity_cash" />
+        <activity android:name=".activity_card" />
+        <activity android:name=".activity_end" />
+        <activity android:name=".activity_error" />
+        <activity android:name=".activity_card2" />
+        <activity android:name=".activity_success" />
+        <activity android:name=".activity_process" />
+        <activity android:name=".activity_main"/>
+        <activity android:name=".activity_main2"/>
+        <activity android:name=".activity_menu"></activity>
+        <activity android:name=".activity_menu2"></activity>
     </application>
 
 </manifest>
