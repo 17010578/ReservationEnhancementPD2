@@ -23,6 +23,7 @@ public class activity_home extends AppCompatActivity {
 
         Intent intentReceived = getIntent();
 
+        setTitle("Welcome To Andos");
 
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
